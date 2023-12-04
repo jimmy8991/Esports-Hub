@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esports Hub</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="title">
+        <h1>Esports Hub</h1>
+        <h5>Your source for all things esports</h5>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <div class="transparent-box">
+                <h2>Table of Contents</h2>
+                <ul>
+                    <li><a href="origin.html" title="Origin of Esports">Origin of Esports</a></li>
+                    <li><a href="impact.html" title="Esports Social and Economic Impact">Esports Social and Economic Impact</a></li>
+                    <li><a href="future.html" title="Future of Esports">Future of Esports</a></li>
+                    <li><a href="global.html" title="Global Impact of Esports">Global Impact of Esports</a></li>
+                </ul>
+            </div>
+            <div class="transparent-box contact-box">
+                <h2>Contact Info</h2>
+                <p>Phone: <a href="tel:+123456789">+123456789</a></p>
+                <p>Email: <a href="mailto:jimmy@esportshub.com">jimmy@esportshub.com</a></p>
+            </div>
+            <div class="newsletter">
+                <p>Newsletter Signup</p>
+                <input type="email" id="emailInput" placeholder="Enter your email">
+                <button class="subscribe-btn" id="subscribeBtn">Subscribe Now</button>
+            </div>
+        </div>
+        <div class="content">
+            <div class="box transparent-box">
+                <h2>Welcome to Esports</h2>
+                <p>Esports Hub is your premier destination for comprehensive coverage of the esports industry. Whether you're an avid esports fan, a professional gamer, or simply curious about this rapidly growing field, we provide you with the latest news, in-depth analysis, and insights.</p>
+            </div>
+            <div class="box transparent-box">
+                <h2>Latest News</h2>
+                <p>Stay up-to-date with the latest developments in the esports world. Our team of experts keeps you informed about the most relevant and exciting news in the industry, including tournament results, player highlights, and emerging trends.</p>
+            </div>
+            <div class="box transparent-box">
+                <h2>Upcoming Events</h2>
+                <div class="event-row">
+                    <div class="event-box dreamhack">
+                        <h2>DreamHack Atlanta</h2>
+                        <p>15 Dec – 17 Dec 2023</p>
+                        <p>Georgia World Congress Center, Atlanta, USA</p>
+                        <p>Gaming festival & LAN party</p>
+                    </div>
+                    <div class="event-box esi-next-gen">
+                        <h2>ESI Next Gen 2024</h2>
+                        <p>6 Mar – 7 Mar 2024</p>
+                        <p>Jesus College, Oxford</p>
+                        <p>Uniting leaders in video games, esports, and education</p>
+                    </div>
+                </div>
+                <div class="event-row">
+                    <div class="event-box esi-singapore">
+                        <h2>ESI Singapore 2024</h2>
+                        <p>Singapore</p>
+                        <p>Esports, games, creators, and education converge</p>
+                    </div>
+                    <div class="event-box esi-london">
+                        <h2>ESI London 2024</h2>
+                        <p>London</p>
+                        <p>Networking, education, content, and hospitality in esports</p>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        <div class="poll-container">
+            <div class="box transparent-box">
+                <h2>Most Intense Esports Game</h2>
+                <form id="esportsPoll">
+                    <p>Which esports game has the most intense and competitive gameplay?</p>
+                    <input type="radio" id="lol" name="game" value="League of Legends">
+                    <label for="lol">League of Legends</label><br>
+                    <input type="radio" id="dota" name="game" value="Dota 2">
+                    <label for="dota">Dota 2</label><br>
+                    <input type="radio" id="cs" name="game" value="Counter-Strike">
+                    <label for="cs">Counter-Strike</label><br>
+                    <input type="radio" id="Overwatch" name="game" value="Overwatch">
+                    <label for="Overwatch">Overwatch</label><br>
+                    <input type="radio" id="Fortnite" name="game" value="Fortnite">
+                    <label for="Fortnite">Fortnite</label><br>
+                    <input type="radio" id="cod" name="game" value="Call of Duty: Warzone">
+                    <label for="cod">Call of Duty: Warzone</label><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div class="poll-results transparent-box">
+                <div id="graphContainer" class="graph-container">
+                <h2>Poll Results</h2>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Jimmy Santiago</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

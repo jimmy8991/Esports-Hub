@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Set minimum height of viewport */
+    background-image: url("future_background.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.header-content {
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    min-height: 0;
+    flex: 1;
+    max-width: 100%; /* Limit maximum width */
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.suggestion-box {
+    flex: 0 0 30%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#suggestionList {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+#suggestionForm {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Set form width to match suggestion box */
+}
+
+#userName,
+#userSuggestion,
+button {
+    width: calc(100% - 20px); /* Adjust input width to match suggestion box */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+}
+
+/* Image Scrolling */
+.image-scroll {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.image-scroll img {
+    width: 33.33%;
+    flex-shrink: 0;
+    animation: scrollImages 15s linear infinite;
+}
+
+@keyframes scrollImages {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-400%);
+    }
+    /* Additional keyframes for smooth transition */
+    125% {
+        transform: translateX(-100%);
+    }
+    150% {
+        transform: translateX(0);
+    }
+}
+
+/* ... previous styles ... */
+
+footer {
+    margin-top: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-to-home {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.back-to-home a {
+    color: white;
+    text-decoration: none;
+}
+

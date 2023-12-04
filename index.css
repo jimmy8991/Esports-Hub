@@ -1,0 +1,295 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    background-image: url('index.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+/* Header styles */
+.title {
+    background-color: rgba(30, 30, 30, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 350px; /* Fixed width */
+    max-height: 600px; /* Fixed height */
+    overflow: scroll; /* Enable scrollbar if content exceeds height */
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    padding: 20px;
+}
+
+.contact-info {
+    font-size: 14px;
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Show ellipsis for overflow */
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-top: 20px; /* Added margin to the list */
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+/* Newsletter styles */
+.newsletter {
+    margin-top: 20px;
+}
+
+.newsletter p {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.newsletter input[type="email"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.subscribe-btn {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.subscribe-btn:hover {
+    background-color: #45a049;
+}
+
+/* Content styles */
+.content {
+    width: 65%;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Transparent box styles */
+.transparent-box {
+    background-color: rgba(30, 30, 30, 0.8); /* Transparent dark gray */
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Adjust shadow color and opacity */
+    padding: 15px; /* Reduced padding */
+    word-wrap: break-word; /* Wrap text */
+    color: #fff; /* Change text color to white */
+    font-size: 18px; /* Increase font size as desired */
+    margin-bottom: 15px; /* Reduced margin */
+    text-align: left; /* Align text to the center */
+}
+
+.poll-results .graph-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(3, auto); /* 3 rows */
+    gap: 10px; /* Gap between bars */
+}
+
+.bar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0; /* Remove margin between bars */
+}
+
+.bar {
+    width: 100px; /* Adjust width of bars as needed */
+    height: 20px; /* Set a fixed height for bars */
+    background-color: #797979; /* Adjust bar color */
+    margin-bottom: 5px; /* Add margin between game name and bar */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Set text color to white */
+    font-size: 12px; /* Adjust font size for the count */
+}
+
+.bar::before {
+    content: attr(data-text); /* Show count on hover */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center; /* Center text horizontally */
+    background-color: rgba(0, 0, 0, 0.1); /* Background color for count */
+    opacity: 0;
+    pointer-events: none; /* Allow hovering through the count */
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1; /* Ensure count is on top */
+}
+
+.bar:hover::before {
+    opacity: 1;
+}
+
+/* Wrapper for event boxes */
+.event-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Event box styles */
+.event-box {
+    width: calc(50% - 20px); /* Two boxes in a row with spacing */
+    padding: 10px; /* Padding for each box */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background-color: rgba(30, 30, 30, 0.8); /* Transparent dark gray */
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Adjust shadow color and opacity */
+    word-wrap: break-word; /* Wrap text */
+    color: #fff; /* Change text color to white */
+    font-size: 18px; /* Increase font size as desired */
+    text-align: left; /* Align text to the left */
+}
+
+/* Arrange events in rows */
+.event-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Clear float to ensure proper alignment */
+.container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .event-box {
+        width: 100%; /* Full width on smaller screens */
+        margin: 10px 0; /* Adjust margin for smaller screens */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar,
+    .content {
+        width: 100%;
+    }
+
+    .transparent-box {
+        margin-bottom: 20px;
+    }
+
+    .title h1 {
+        font-size: 28px;
+    }
+    .title h5 {
+        font-size: 14px;
+    }
+}
+
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(30, 30, 30, 0.8);
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Poll results styles */
+.poll-results .bar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px; /* Increased margin between bars */
+}
+
+.poll-results .bar {
+    width: 100px;
+    height: 20px;
+    background-color: #797979;
+    margin-bottom: 10px; /* Increased margin between game names */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 12px;
+}
+
+.bar {
+    width: 100px;
+    height: 20px;
+    background-color: #797979;
+    margin-bottom: 5px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 12px;
+}
+
+.bar::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.bar:hover::before {
+    opacity: 1;
+}
